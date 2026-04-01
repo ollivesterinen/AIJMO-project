@@ -1,3 +1,31 @@
 * {
     text-align: center;
+    background-image: url("Pictures/Background_1.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a:link, a:visited {
+    color: rgb(54, 34, 2);
+    padding: 0;
+    display: flex;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+a:hover, a:active {
+    opacity: 50%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.navbar {
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    gap: 20px;
 }
