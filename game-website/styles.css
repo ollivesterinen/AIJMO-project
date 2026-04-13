@@ -1,5 +1,12 @@
 * {
+
+}
+
+h1 {
     text-align: center;
+}
+
+body {
     background-image: url("Pictures/Background_1.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -16,16 +23,36 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    opacity: 50%;
+    background-color: #8ed7ff;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  background-color: #d5f0ff;
+  display: flex;
+  justify-content: center;
 }
 
-.navbar {
+img {
+    max-width: 100%;
+}
+.logo {
     display: flex;
-    padding: 8px;
     justify-content: center;
-    gap: 20px;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.devteam {
+    background-color: #d5f0ffab;
+    
 }

@@ -1,0 +1,18 @@
+Pelin www-sivuista oman version tekeminen kuuluu pakollisena suorituksena www-tekniikat-opintojaksolle.
+Pelin sivujen sekä peliportaalin on oltava valmiina 5.sprintin aikana laitettuna koulun www-palvelimelle.
+Www-sivulle tulee laittaa logot, jotka löytyvät Moodlesta 25TIKO Kevään peliprojekti ja pelimessut -sivustolta (esim.. ESR, Hanke, Tuni sekä Tiko).
+
+Vaatimukset:
+
+    - Responsiivisuus. Vähintään puhelimelle ja isoille näytöille mobile-first-tavalla.
+    (ensin puhelinkoolle sitten muut. Saa tehdä useammallekin eri versiolle)
+    - Validoitu virheettömäksi 
+    ( html5 sekä css)
+    - Bootstrapin käyttämimen on sallittu
+    - Css-koodia kommentoitu riittävästi, jotta nähdään, että tekijä ymmärtänyt mitä on tehnyt
+    - Vähintään kaksikieliset (FIN & EN)
+    - Kuvat optimoitu (pakattu riittävän tehokkaasti sekä kooltaan tarkoituksen mukaisiksi toisin sanoen pikselimääriä pienennetään 
+    sopivaksi eikä pelkästään skaalata isoa kuvaa pieneksi), kunnolliset asialliset kuvat pelin tekijöistä
+    - Linkki takaisin peliportaaliin
+    - Linkki traileriin ja peliin Google Playssä
+    - Yhteistyökumppaneiden logot
