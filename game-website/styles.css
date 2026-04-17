@@ -1,6 +1,8 @@
 * {
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
+    font-size: vw;
+    margin: 0;
 }
 
 body {
@@ -8,79 +10,86 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-
+    font-size: 16px;
 }
+/* Valikko */
 
-p {
-    padding: 10px;
-}
-
-a:link, a:visited {
-    color: #F5FEFF;
-    padding: 10px 10px;
-    margin: 4px;
-    display: flex;
-    text-decoration: none;
-    text-shadow: 0px 3px 3px #58480e;
-    font-weight: bold;
-    justify-content: center;
-}
-
-a:hover, a:active {
-    background-color: #b18a00;
-    border-radius: 25px;
+#navbar {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 8px 0 rgba(10, 0, 97, 0.2);
 }
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    padding: 8px ;
     background-color: #2f8bf4;
     display: flex;
-    justify-content: center
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
 }
 
-img {
-    display: flex;
-    max-width: 100%;
+a:link, a:visited {
+    color: #F5FEFF;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    text-shadow: 0px 2px 3px #58480e;
+    font-weight: bold;
+    border-radius: 20px;
 }
 
-#navbar {
-    position: sticky;
-    top: 10px;
-    overflow: hidden;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px 0 rgba(10, 0, 97, 0.2);
+a:hover, a:active {
+    background-color: #62abff;
 }
+
+/* Takapaneeli */
+
+.backpanel {
+    background-color: #b5fdff75;
+    margin: 0% 10% 0%;
+}
+
+/* Logo */
 
 #logo {
     display: flex;
     justify-content: center;
+    padding: 24px;
 }
 
-.box img {
-    border-radius: 50%;
-    box-shadow: 0 4px 8px 0 rgba(10, 0, 97, 0.2);
+#logo img {
+    max-width: 100%;
 }
+
+/* Boxit */
 
 .box {
-    margin: 0px 400px;
-    gap: 20px;
-    background-color: #b5fdff75;
     border-radius: 25px;
-    box-shadow: 0 4px 8px 0 rgba(10, 0, 97, 0.2);
+    padding: 25px;
     scroll-margin-top: 80px;
 }
 
 .box h1 {
     padding: 10px;
     text-align: center;
+    margin-bottom: 16px;
 }
+
+/* Tiimi esittely */
 
 #members {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 24px;
+}
+
+#members img {
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(10, 0, 97, 0.2);
 }
 
 #gameimages img{
@@ -88,17 +97,31 @@ img {
     margin: 10px;
     flex-wrap: wrap;
 }
-@media only screen and (max-width: 600px) {
 
-    a:link, a:visited {
-        padding: 10px 5px;
-    }
+figcaption {
+    text-align: center;
+    font-weight: bold;
+}
 
-    body {
-        margin: 10px;
-    }
+/* Pelin kuvat */
 
-    .box {
-        margin: 10px;
-    }
+#gameimages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+#gameimages img {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+}
+.footer {
+    background-color: #2f8bf4;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
 }

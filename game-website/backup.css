@@ -1,0 +1,105 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    background-image: url("Pictures/Background_1.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+p {
+    padding: 10px;
+}
+
+a:link, a:visited {
+    color: #F5FEFF;
+    padding: 10px 10px;
+    margin: 4px;
+    display: flex;
+    text-decoration: none;
+    text-shadow: 0px 3px 3px #58480e;
+    font-weight: bold;
+    justify-content: center;
+}
+
+a:hover, a:active {
+    background-color: #b18a00;
+    border-radius: 25px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #2f8bf4;
+    display: flex;
+    justify-content: center
+}
+
+img {
+    display: flex;
+    max-width: 100%;
+}
+
+#navbar {
+    position: sticky;
+    top: 10px;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(10, 0, 97, 0.2);
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+}
+
+.box img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(10, 0, 97, 0.2);
+}
+
+.box {
+    margin: 0px 400px;
+    gap: 20px;
+    background-color: #b5fdff75;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(10, 0, 97, 0.2);
+    scroll-margin-top: 80px;
+}
+
+.box h1 {
+    padding: 10px;
+    text-align: center;
+}
+
+#members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#gameimages img{
+    border-radius: 25px;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+
+    a:link, a:visited {
+        padding: 10px 5px;
+    }
+
+    body {
+        margin: 10px;
+    }
+
+    .box {
+        margin: 10px;
+    }
+}
