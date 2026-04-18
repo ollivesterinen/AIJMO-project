@@ -18,7 +18,7 @@ config/name="Puhku"
 run/main_scene="uid://6kbpuk70yo3q"
 config/features=PackedStringArray("4.6", "C#", "Mobile")
 boot_splash/image="uid://crno7oqguboki"
-config/icon="uid://dsnjtkyh8o8wr"
+config/icon="uid://x1lqkdb8qu3u"
 boot_splash/minimum_display_time=4000
 
 [autoload]
