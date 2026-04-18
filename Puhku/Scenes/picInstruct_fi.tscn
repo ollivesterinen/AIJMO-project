@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://b7cdma427bd0j"]
+
+[ext_resource type="Theme" uid="uid://uf1untvynw3t" path="res://Assets/Fonts/BowlbyneSC/fonttiteema.tres" id="1_j2nal"]
+[ext_resource type="Texture2D" uid="uid://b6koywdb40brq" path="res://Assets/Backgrounds/Background_1.png" id="2_vq2pm"]
+[ext_resource type="Script" uid="uid://b8nepdsfp4ce5" path="res://Scripts/picInstruction.cs" id="3_14mw4"]
+[ext_resource type="Texture2D" uid="uid://bu4nnfcrrf1kw" path="res://Assets/Backgrounds/Blurred_background.png" id="3_vq2pm"]
+[ext_resource type="Texture2D" uid="uid://bfq5uplne7ws5" path="res://Assets/Icons/Finnish/Ohjeet.png" id="4_j2nal"]
+[ext_resource type="Texture2D" uid="uid://etyhsqflb1ul" path="res://Assets/Icons/General/Back_button.png" id="5_vq2pm"]
+[ext_resource type="FontFile" uid="uid://bexn0wvb6jwvl" path="res://Assets/Fonts/Gabarito/Gabarito-SemiBold.ttf" id="6_j2nal"]
+[ext_resource type="Texture2D" uid="uid://biqdfy8dx3fdl" path="res://Assets/Icons/Finnish/Ohita.png" id="7_n3q73"]
+
+[node name="Node2D" type="Control" unique_id=2003862781]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_j2nal")
+metadata/_edit_horizontal_guides_ = [-31.0]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=859817853]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vq2pm")
+expand_mode = 1
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="blurredBackground" type="TextureRect" parent="." unique_id=225417062]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_vq2pm")
+expand_mode = 5
+
+[node name="picInstruction" type="Control" parent="." unique_id=1403675701]
+layout_mode = 1
+anchor_top = 0.002
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.296
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_j2nal")
+script = ExtResource("3_14mw4")
+
+[node name="CenterContainer1" type="CenterContainer" parent="picInstruction" unique_id=1866412770]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 252.0
+offset_top = 60.0
+offset_right = -238.0
+offset_bottom = -101.99988
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_j2nal")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="picInstruction/CenterContainer1" unique_id=1217597016]
+layout_mode = 2
+theme = ExtResource("1_j2nal")
+alignment = 1
+
+[node name="instructions" type="Button" parent="picInstruction/CenterContainer1/VBoxContainer" unique_id=80698235]
+custom_minimum_size = Vector2(354, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("4_j2nal")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="text" type="Label" parent="picInstruction/CenterContainer1/VBoxContainer" unique_id=853929869]
+custom_minimum_size = Vector2(620, 170)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.6039216, 0.30980393, 0.09411765, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.4862745)
+theme_override_fonts/font = ExtResource("6_j2nal")
+theme_override_font_sizes/font_size = 36
+text = "
+PUHKAISE ILMAPALLOT OIKEASSA JÄRJESTYKSESSÄ MUODOSTAAKSESI ANNETTU SANA. SANA NÄKYY RUUDUN ALAREUNASSA."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="picInstruction/CenterContainer1/VBoxContainer" unique_id=1744167567]
+layout_mode = 2
+theme_override_constants/separation = 7
+alignment = 1
+
+[node name="back" type="Button" parent="picInstruction/CenterContainer1/VBoxContainer/HBoxContainer" unique_id=1541154281]
+custom_minimum_size = Vector2(85, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+icon = ExtResource("5_vq2pm")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="skip" type="Button" parent="picInstruction/CenterContainer1/VBoxContainer/HBoxContainer" unique_id=1449879782]
+custom_minimum_size = Vector2(140.565, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+icon = ExtResource("7_n3q73")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="picInstruction/CenterContainer1/VBoxContainer/HBoxContainer/back" to="picInstruction" method="_on_back_pressed"]
+[connection signal="pressed" from="picInstruction/CenterContainer1/VBoxContainer/HBoxContainer/skip" to="picInstruction" method="_on_skip_pressed"]

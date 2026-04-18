@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://uf1untvynw3t"]
+
+[ext_resource type="FontFile" uid="uid://chmasopoo4qvi" path="res://Assets/Fonts/Chango/Chango-Regular.ttf" id="1_t66ig"]
+
+[resource]
+default_font = ExtResource("1_t66ig")

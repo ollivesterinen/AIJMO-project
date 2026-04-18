@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://cl4c7jypfoiup"]
+
+[ext_resource type="FontFile" uid="uid://bmmn8tx85pi85" path="res://Assets/Fonts/BowlbyneSC/BowlbyOneSC-Regular.ttf" id="1_pmjer"]
+
+[resource]
+default_font = ExtResource("1_pmjer")

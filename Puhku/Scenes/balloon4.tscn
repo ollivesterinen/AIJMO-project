@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://byhg8yh4t60yf"]
+
+[ext_resource type="PackedScene" uid="uid://bi71eciu0liqa" path="res://Scenes/balloon.tscn" id="1_mbe11"]
+[ext_resource type="Texture2D" uid="uid://u8rjxc1k5l0k" path="res://Assets/Sprites/Balloons/Balloon_5.png" id="2_mbe11"]
+[ext_resource type="Texture2D" uid="uid://dmp8crveom3yc" path="res://Assets/Sprites/Pop_animation.png" id="3_qlgrq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5g3f3"]
+atlas = ExtResource("3_qlgrq")
+region = Rect2(276, 0, 265, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8nsx"]
+atlas = ExtResource("3_qlgrq")
+region = Rect2(551, 0, 270, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fff7"]
+atlas = ExtResource("3_qlgrq")
+region = Rect2(11, 0, 248, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsdp8"]
+atlas = ExtResource("3_qlgrq")
+region = Rect2(813, 0, 369, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6tv0"]
+atlas = ExtResource("3_qlgrq")
+region = Rect2(1178, 0, 320, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ngds"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mbe11")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5g3f3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8nsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fff7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsdp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6tv0")
+}],
+"loop": false,
+"name": &"pop",
+"speed": 25.0
+}]
+
+[node name="Balloon" unique_id=1771326117 instance=ExtResource("1_mbe11")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1447081730]
+position = Vector2(-0.9509419, -0.5)
+scale = Vector2(0.4456958, 0.41015625)
+sprite_frames = SubResource("SpriteFrames_8ngds")
+animation = &"idle"
+
+[node name="CollisionPolygon2D" parent="." index="1" unique_id=1478025417]
+polygon = PackedVector2Array(-7, -55, -20, -51, -31, -45, -41, -33, -46, -20, -48, -6, -43, 12, -35, 27, -26, 37, -17, 44, -8, 47, -1, 48, -4, 52, 8, 52, 6, 48, 18, 46, 31, 36, 42, 18, 46, 5, 47, -3, 47, -11, 46, -19, 44, -27, 39, -36, 33, -42, 27, -47.4, 15, -53, 2, -55)
+
+[node name="Label" parent="." index="2" unique_id=1150956398]
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.58431375)

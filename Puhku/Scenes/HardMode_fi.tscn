@@ -1,0 +1,285 @@
+[gd_scene format=3 uid="uid://bbhn6lbqaeup0"]
+
+[ext_resource type="Script" uid="uid://mtff0je00p6n" path="res://Scripts/GameLogic.cs" id="1_4xens"]
+[ext_resource type="PackedScene" uid="uid://bi71eciu0liqa" path="res://Scenes/balloon.tscn" id="2_nhi2l"]
+[ext_resource type="PackedScene" uid="uid://c414lam2i487u" path="res://Scenes/balloon2.tscn" id="3_gtylw"]
+[ext_resource type="PackedScene" uid="uid://g5mjr1kk7f6o" path="res://Scenes/balloon3.tscn" id="4_spara"]
+[ext_resource type="Texture2D" uid="uid://b6koywdb40brq" path="res://Assets/Backgrounds/Background_1.png" id="5_1ax3x"]
+[ext_resource type="PackedScene" uid="uid://byhg8yh4t60yf" path="res://Scenes/balloon4.tscn" id="5_5favf"]
+[ext_resource type="Texture2D" uid="uid://eiguk5n06j1i" path="res://Assets/Backgrounds/Correct_word.png" id="6_5favf"]
+[ext_resource type="Texture2D" uid="uid://g7kttjjlf7xb" path="res://Assets/Icons/Finnish/Seuraava_sana.png" id="7_4xens"]
+[ext_resource type="PackedScene" uid="uid://ch7ldcnumuddp" path="res://Scenes/balloon6.tscn" id="7_v2n2o"]
+[ext_resource type="Texture2D" uid="uid://hujplktgxmap" path="res://Assets/Icons/Finnish/Paavalikko.png" id="8_nhi2l"]
+[ext_resource type="PackedScene" uid="uid://diabn0cmbgjx2" path="res://Scenes/balloon7.tscn" id="8_nqax0"]
+[ext_resource type="Theme" uid="uid://cl4c7jypfoiup" path="res://Assets/Fonts/BowlbyneSC/fonttiteema2.tres" id="9_nqax0"]
+[ext_resource type="Texture2D" uid="uid://b4texx422e73o" path="res://Assets/Backgrounds/Oikea_sana.png" id="10_5favf"]
+[ext_resource type="Texture2D" uid="uid://dttsb3q0igya2" path="res://Assets/Icons/General/Pause_yellow.png" id="10_10wws"]
+[ext_resource type="Texture2D" uid="uid://c8iicghxylb6x" path="res://Assets/Icons/Finnish/Takaisin_peliin.png" id="12_gtylw"]
+[ext_resource type="Texture2D" uid="uid://cd4o7ylov2ojc" path="res://Assets/Icons/General/Music_on_yellow.png" id="13_l1smm"]
+[ext_resource type="Texture2D" uid="uid://cooc2t2ry4yp2" path="res://Assets/Icons/General/SFX_on_yellow.png" id="14_gjbah"]
+[ext_resource type="Texture2D" uid="uid://dbmrbbmdkmq7v" path="res://Assets/Backgrounds/Peli_pysäytetty.png" id="15_liv32"]
+
+[node name="GameLogic" type="Node" unique_id=48654284]
+script = ExtResource("1_4xens")
+_balloonTemplates = Array[PackedScene]([ExtResource("2_nhi2l"), ExtResource("3_gtylw"), ExtResource("4_spara"), ExtResource("5_5favf"), ExtResource("7_v2n2o"), ExtResource("8_nqax0")])
+
+[node name="Background" type="TextureRect" parent="." unique_id=1652673657]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_1ax3x")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="WinContainer" type="CanvasLayer" parent="." unique_id=952941301]
+
+[node name="PauseBackgroud2" type="TextureRect" parent="WinContainer" unique_id=176462230]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_5favf")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CenterContainer" type="CenterContainer" parent="WinContainer" unique_id=1382814341]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WinContainer/CenterContainer" unique_id=1078401936]
+layout_mode = 2
+theme_override_constants/separation = -50
+
+[node name="SpacerNoFunction2" type="Control" parent="WinContainer/CenterContainer/VBoxContainer" unique_id=197753269]
+custom_minimum_size = Vector2(225, 300)
+layout_mode = 2
+
+[node name="NextLevelButton" type="Button" parent="WinContainer/CenterContainer/VBoxContainer" unique_id=1060891189]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+icon = ExtResource("7_4xens")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="MainMenuButton" type="Button" parent="WinContainer/CenterContainer/VBoxContainer" unique_id=1996586173]
+custom_minimum_size = Vector2(220, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+icon = ExtResource("8_nhi2l")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1086527632]
+autostart = true
+
+[node name="WordDisplay" type="RichTextLabel" parent="." unique_id=449162779]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -347.0
+offset_top = -75.0
+offset_right = 347.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.0218346, 0.96875)
+theme = ExtResource("9_nqax0")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PauseButtonContainer" type="HBoxContainer" parent="." unique_id=809405699]
+anchors_preset = -1
+anchor_left = 0.87600005
+anchor_top = 0.80200005
+anchor_right = 0.96800005
+anchor_bottom = 0.96500003
+offset_left = -0.15203857
+offset_top = 0.30395508
+offset_right = 157.86389
+offset_bottom = 158.68
+scale = Vector2(0.39999998, 0.39999998)
+alignment = 1
+
+[node name="PauseButton" type="Button" parent="PauseButtonContainer" unique_id=2087160783]
+layout_mode = 2
+icon = ExtResource("10_10wws")
+flat = true
+
+[node name="WindowCoverForPause" type="CanvasLayer" parent="." unique_id=257384921]
+
+[node name="PauseBackgroud" type="TextureRect" parent="WindowCoverForPause" unique_id=1671690101]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_liv32")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PauseMenu" type="Control" parent="WindowCoverForPause" unique_id=332247465]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="WindowCoverForPause/PauseMenu" unique_id=1244194091]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WindowCoverForPause/PauseMenu/CenterContainer" unique_id=1553898610]
+layout_mode = 2
+theme_override_constants/separation = -10
+alignment = 1
+
+[node name="SpacerNoFunction" type="Control" parent="WindowCoverForPause/PauseMenu/CenterContainer/VBoxContainer" unique_id=637536547]
+custom_minimum_size = Vector2(225, 300)
+layout_mode = 2
+
+[node name="BackToGame" type="Button" parent="WindowCoverForPause/PauseMenu/CenterContainer/VBoxContainer" unique_id=1914752635]
+process_mode = 3
+custom_minimum_size = Vector2(350, 125)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("12_gtylw")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="MainMenu" type="Button" parent="WindowCoverForPause/PauseMenu/CenterContainer/VBoxContainer" unique_id=1684003717]
+process_mode = 3
+custom_minimum_size = Vector2(220, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("8_nhi2l")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="MusicAndSound" type="CenterContainer" parent="WindowCoverForPause/PauseMenu/CenterContainer/VBoxContainer" unique_id=557049302]
+process_mode = 3
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowCoverForPause/PauseMenu/CenterContainer/VBoxContainer/MusicAndSound" unique_id=183738098]
+process_mode = 3
+layout_mode = 2
+alignment = 1
+
+[node name="MusicOn" type="Button" parent="WindowCoverForPause/PauseMenu/CenterContainer/VBoxContainer/MusicAndSound/HBoxContainer" unique_id=480773174]
+process_mode = 3
+custom_minimum_size = Vector2(80, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("13_l1smm")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="SFX_On" type="Button" parent="WindowCoverForPause/PauseMenu/CenterContainer/VBoxContainer/MusicAndSound/HBoxContainer" unique_id=748863835]
+process_mode = 3
+custom_minimum_size = Vector2(80, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("14_gjbah")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="WinCoverEndWordList" type="CanvasLayer" parent="." unique_id=239088599]
+visible = false
+
+[node name="WordListBackground" type="TextureRect" parent="WinCoverEndWordList" unique_id=2030341139]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_right = 768.0
+offset_bottom = 433.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.599939, 0.599939)
+texture = ExtResource("6_5favf")
+
+[node name="EndOfWordList" type="Control" parent="WinCoverEndWordList" unique_id=769891925]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="WinCoverEndWordList/EndOfWordList" unique_id=1333192480]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0025387, 0.99756986)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WinCoverEndWordList/EndOfWordList/CenterContainer" unique_id=988213160]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+
+[node name="SpacerNoFunction" type="Control" parent="WinCoverEndWordList/EndOfWordList/CenterContainer/VBoxContainer" unique_id=1990653110]
+custom_minimum_size = Vector2(120, 300)
+layout_mode = 2
+
+[node name="NoWordsLeft" type="Label" parent="WinCoverEndWordList/EndOfWordList/CenterContainer/VBoxContainer" unique_id=1846875631]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6039216, 0.30980393, 0.09411765, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16900001)
+theme_override_font_sizes/font_size = 25
+text = "Uusia sanoja ei ole saatavilla. Aloita uusi peli päävalikosta!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MainMenuList" type="Button" parent="WinCoverEndWordList/EndOfWordList/CenterContainer/VBoxContainer" unique_id=1899265011]
+custom_minimum_size = Vector2(300, 120)
+layout_mode = 2
+icon = ExtResource("8_nhi2l")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="HardModeTimer" type="Timer" parent="." unique_id=18134749]
+wait_time = 0.8
+
+[connection signal="pressed" from="WinContainer/CenterContainer/VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="WinContainer/CenterContainer/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]
+[connection signal="pressed" from="PauseButtonContainer/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="WindowCoverForPause/PauseMenu/CenterContainer/VBoxContainer/BackToGame" to="." method="_on_back_to_game_pressed"]
+[connection signal="pressed" from="WindowCoverForPause/PauseMenu/CenterContainer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="toggled" from="WindowCoverForPause/PauseMenu/CenterContainer/VBoxContainer/MusicAndSound/HBoxContainer/MusicOn" to="." method="_on_music_on_toggled"]
+[connection signal="toggled" from="WindowCoverForPause/PauseMenu/CenterContainer/VBoxContainer/MusicAndSound/HBoxContainer/SFX_On" to="." method="_on_sfx_on_toggled"]
+[connection signal="pressed" from="WinCoverEndWordList/EndOfWordList/CenterContainer/VBoxContainer/MainMenuList" to="." method="_on_main_menu_list_pressed"]

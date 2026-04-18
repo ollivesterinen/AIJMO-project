@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://bxkrta48vo6d0"]
+
+[ext_resource type="Script" uid="uid://b6shdceclbbfg" path="res://Scripts/chooseMode.cs" id="1_6tywx"]
+[ext_resource type="Texture2D" uid="uid://b6koywdb40brq" path="res://Assets/Backgrounds/Background_1.png" id="2_xm3h2"]
+[ext_resource type="Texture2D" uid="uid://cdt1i8esnxfof" path="res://Assets/Icons/Finnish/Helppo_pelimuoto.png" id="3_6tywx"]
+[ext_resource type="Texture2D" uid="uid://c1kk5moj614um" path="res://Assets/Icons/Finnish/Vaikea_pelimuoto.png" id="4_xm3h2"]
+[ext_resource type="Texture2D" uid="uid://etyhsqflb1ul" path="res://Assets/Icons/General/Back_button.png" id="5_6tywx"]
+
+[node name="Node2D" type="Control" unique_id=2096268279]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="chooseMode" type="Control" parent="." unique_id=225441065]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6tywx")
+
+[node name="TextureRect" type="TextureRect" parent="chooseMode" unique_id=1772072560]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xm3h2")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CenterContainer1" type="CenterContainer" parent="chooseMode" unique_id=519653270]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.356
+anchor_top = 0.123
+anchor_right = 0.64500004
+anchor_bottom = 0.64900005
+offset_left = -0.11199951
+offset_top = 0.29599762
+offset_right = 186.95996
+offset_bottom = 191.44797
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.64, 0.64)
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="chooseMode/CenterContainer1" unique_id=1199889227]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="word" type="Button" parent="chooseMode/CenterContainer1/VBoxContainer1" unique_id=1309274901]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+icon = ExtResource("3_6tywx")
+flat = true
+
+[node name="picture" type="Button" parent="chooseMode/CenterContainer1/VBoxContainer1" unique_id=1854944825]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+icon = ExtResource("4_xm3h2")
+flat = true
+
+[node name="CenterContainer2" type="CenterContainer" parent="chooseMode" unique_id=1724773162]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.455
+anchor_top = 0.679
+anchor_right = 0.54700005
+anchor_bottom = 0.84200007
+offset_left = -0.16003418
+offset_top = 0.0079956055
+offset_right = 157.85596
+offset_bottom = 158.38397
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+
+[node name="back" type="Button" parent="chooseMode/CenterContainer2" unique_id=1550153257]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+icon = ExtResource("5_6tywx")
+flat = true

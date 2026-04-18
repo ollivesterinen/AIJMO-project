@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://bi71eciu0liqa"]
+
+[ext_resource type="Script" uid="uid://jqws2ecdyttu" path="res://Scripts/Balloon.cs" id="1_r345k"]
+[ext_resource type="AudioStream" uid="uid://b61sj6e2negcc" path="res://Assets/Audio/poks1.mp3" id="2_1xemn"]
+[ext_resource type="AudioStream" uid="uid://dai1wu54t175d" path="res://Assets/Audio/poks2.mp3" id="3_788im"]
+[ext_resource type="AudioStream" uid="uid://1gmu5a02p6c6" path="res://Assets/Audio/poks3.mp3" id="4_y35mm"]
+[ext_resource type="AudioStream" uid="uid://dfg8tkkrloaiq" path="res://Assets/Audio/poks4.mp3" id="5_8fc1f"]
+[ext_resource type="AudioStream" uid="uid://dlu8rohf4x0v3" path="res://Assets/Audio/poks5.mp3" id="6_se17g"]
+[ext_resource type="AudioStream" uid="uid://cst28kykxhvre" path="res://Assets/Audio/Wrongballoon.mp3" id="7_788im"]
+[ext_resource type="Texture2D" uid="uid://c0aaxae2wi7hg" path="res://Assets/Sprites/Balloons/Balloon_4.png" id="8_43nfd"]
+[ext_resource type="Texture2D" uid="uid://dmp8crveom3yc" path="res://Assets/Sprites/Pop_animation.png" id="9_43nfd"]
+[ext_resource type="Theme" uid="uid://cl4c7jypfoiup" path="res://Assets/Fonts/BowlbyneSC/fonttiteema2.tres" id="10_43nfd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5g3f3"]
+atlas = ExtResource("9_43nfd")
+region = Rect2(276, 0, 265, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8nsx"]
+atlas = ExtResource("9_43nfd")
+region = Rect2(551, 0, 270, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fff7"]
+atlas = ExtResource("9_43nfd")
+region = Rect2(11, 0, 248, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsdp8"]
+atlas = ExtResource("9_43nfd")
+region = Rect2(813, 0, 369, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6tv0"]
+atlas = ExtResource("9_43nfd")
+region = Rect2(1178, 0, 320, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rl6ge"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_43nfd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5g3f3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8nsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fff7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsdp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6tv0")
+}],
+"loop": false,
+"name": &"pop",
+"speed": 25.0
+}]
+
+[node name="Balloon" type="Area2D" unique_id=164546979]
+script = ExtResource("1_r345k")
+_popSounds = Array[AudioStream]([ExtResource("2_1xemn"), ExtResource("3_788im"), ExtResource("4_y35mm"), ExtResource("5_8fc1f"), ExtResource("6_se17g")])
+_failSound = ExtResource("7_788im")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1447081730]
+position = Vector2(-0.25000644, -1.625004)
+scale = Vector2(0.4863281, 0.4267578)
+sprite_frames = SubResource("SpriteFrames_rl6ge")
+animation = &"pop"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1478025417]
+polygon = PackedVector2Array(-15, -55, -15, -53.3, -26.400002, -48, -28.900002, -48, -38.9, -36, -40.6, -36, -42.5, -28, -44.2, -28, -42, -7.799999, -42, -4.200001, -27, 12.699997, -27, 14.199997, -9.5, 23, -6, 23, -3, 27, -0.40000153, 27, 22.5, 13, 25, 13, 35, 0, 36.5, 0, 39.5, -10, 41.1, -10, 40, -26.099998, 40, -30.7, 27, -45.8, 27, -47.4, 11, -53.5, 11, -55)
+
+[node name="Label" type="Label" parent="." unique_id=1150956398]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -33.5
+offset_right = 16.0
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_43nfd")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.54509807)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 2
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="PopPlayer" type="AudioStreamPlayer2D" parent="." unique_id=472882903]
+
+[node name="RedColorTimer" type="Timer" parent="." unique_id=220510461]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

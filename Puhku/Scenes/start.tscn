@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://6kbpuk70yo3q"]
+
+[ext_resource type="Script" uid="uid://cshr2ait1d0wu" path="res://Scripts/menu.cs" id="1_r48yj"]
+[ext_resource type="Texture2D" uid="uid://b6koywdb40brq" path="res://Assets/Backgrounds/Background_1.png" id="2_rk01k"]
+[ext_resource type="Texture2D" uid="uid://dj6yedpq08idd" path="res://Assets/Logo/Logo_V4.png" id="3_o3wvq"]
+[ext_resource type="Texture2D" uid="uid://paa25ct00l0m" path="res://Assets/Icons/English/New_game_yellow.png" id="4_pg4io"]
+[ext_resource type="Texture2D" uid="uid://67hhd5j0e1od" path="res://Assets/Icons/English/Quit_game_yellow.png" id="5_iceld"]
+[ext_resource type="Texture2D" uid="uid://camw2q5kduvyp" path="res://Assets/Icons/Finnish/Language_fi_yellow.png" id="6_pg4io"]
+[ext_resource type="Texture2D" uid="uid://dn72ssnnn0lqt" path="res://Assets/Icons/English/Language_en_yellow.png" id="7_iceld"]
+[ext_resource type="Texture2D" uid="uid://cd4o7ylov2ojc" path="res://Assets/Icons/General/Music_on_yellow.png" id="8_7pwkw"]
+[ext_resource type="Texture2D" uid="uid://cooc2t2ry4yp2" path="res://Assets/Icons/General/SFX_on_yellow.png" id="10_knwj7"]
+
+[node name="Node2D" type="Node" unique_id=2052747519]
+
+[node name="Background" type="TextureRect" parent="." unique_id=1307012800]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rk01k")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="control" type="Control" parent="." unique_id=116100365]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r48yj")
+
+[node name="CenterContainer" type="CenterContainer" parent="control" unique_id=432345270]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.077
+anchor_right = 0.5
+anchor_bottom = 0.077
+offset_left = -304.0
+offset_right = 638.0
+offset_bottom = 896.0
+grow_horizontal = 2
+scale = Vector2(0.64439315, 0.6035357)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="control/CenterContainer" unique_id=1019614798]
+layout_mode = 2
+
+[node name="Logo" type="TextureRect" parent="control/CenterContainer/VBoxContainer" unique_id=718833187]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_o3wvq")
+
+[node name="newGame" type="Button" parent="control/CenterContainer/VBoxContainer" unique_id=2109835525]
+custom_minimum_size = Vector2(460, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/h_separation = 0
+icon = ExtResource("4_pg4io")
+flat = true
+expand_icon = true
+
+[node name="quitGame" type="Button" parent="control/CenterContainer/VBoxContainer" unique_id=525270836]
+custom_minimum_size = Vector2(350, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+icon = ExtResource("5_iceld")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="CenterContainer2" type="CenterContainer" parent="control" unique_id=1597654033]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.027
+anchor_top = 0.87200004
+anchor_right = 0.164
+anchor_bottom = 0.98600006
+offset_left = -0.10400009
+offset_top = -0.056030273
+offset_right = 405.072
+offset_bottom = 190.07196
+grow_vertical = 0
+scale = Vector2(0.27999905, 0.27999905)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="control/CenterContainer2" unique_id=1009019766]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="finnish" type="Button" parent="control/CenterContainer2/HBoxContainer" unique_id=489099206]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+icon = ExtResource("6_pg4io")
+flat = true
+
+[node name="english" type="Button" parent="control/CenterContainer2/HBoxContainer" unique_id=1065981833]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+icon = ExtResource("7_iceld")
+flat = true
+
+[node name="CenterContainer3" type="CenterContainer" parent="control" unique_id=2026438651]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.837
+anchor_top = 0.87200004
+anchor_right = 0.97400004
+anchor_bottom = 0.98600006
+offset_left = -0.22399902
+offset_top = -0.05609131
+offset_right = 404.9519
+offset_bottom = 190.07196
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.28, 0.28)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="control/CenterContainer3" unique_id=1259141917]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="musicToggle" type="Button" parent="control/CenterContainer3/HBoxContainer" unique_id=1233207005]
+layout_mode = 2
+mouse_force_pass_scroll_events = false
+theme_override_font_sizes/font_size = 26
+icon = ExtResource("8_7pwkw")
+flat = true
+
+[node name="SFX_Toggle" type="Button" parent="control/CenterContainer3/HBoxContainer" unique_id=1494058896]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+icon = ExtResource("10_knwj7")
+flat = true
