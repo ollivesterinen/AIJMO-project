@@ -3,14 +3,16 @@
 [ext_resource type="Script" uid="uid://mtff0je00p6n" path="res://Scripts/GameLogic.cs" id="1_4xens"]
 [ext_resource type="PackedScene" uid="uid://bi71eciu0liqa" path="res://Scenes/balloon.tscn" id="2_nhi2l"]
 [ext_resource type="PackedScene" uid="uid://c414lam2i487u" path="res://Scenes/balloon2.tscn" id="3_gtylw"]
+[ext_resource type="PackedScene" uid="uid://dqdgx5k7rod3s" path="res://Scenes/balloon1.tscn" id="3_liv32"]
 [ext_resource type="PackedScene" uid="uid://g5mjr1kk7f6o" path="res://Scenes/balloon3.tscn" id="4_spara"]
-[ext_resource type="Texture2D" uid="uid://b6koywdb40brq" path="res://Assets/Backgrounds/Background_1.png" id="5_1ax3x"]
 [ext_resource type="PackedScene" uid="uid://byhg8yh4t60yf" path="res://Scenes/balloon4.tscn" id="5_5favf"]
 [ext_resource type="Texture2D" uid="uid://eiguk5n06j1i" path="res://Assets/Backgrounds/Correct_word.png" id="6_5favf"]
 [ext_resource type="Texture2D" uid="uid://g7kttjjlf7xb" path="res://Assets/Icons/Finnish/Seuraava_sana.png" id="7_4xens"]
 [ext_resource type="PackedScene" uid="uid://ch7ldcnumuddp" path="res://Scenes/balloon6.tscn" id="7_v2n2o"]
+[ext_resource type="Texture2D" uid="uid://duorq8e65ibp8" path="res://Assets/Backgrounds/Background_3.png" id="8_1ax3x"]
 [ext_resource type="Texture2D" uid="uid://hujplktgxmap" path="res://Assets/Icons/Finnish/Paavalikko.png" id="8_nhi2l"]
 [ext_resource type="PackedScene" uid="uid://diabn0cmbgjx2" path="res://Scenes/balloon7.tscn" id="8_nqax0"]
+[ext_resource type="PackedScene" uid="uid://bxtmqruv60nqi" path="res://Scenes/balloon5.tscn" id="8_v2n2o"]
 [ext_resource type="Theme" uid="uid://cl4c7jypfoiup" path="res://Assets/Fonts/BowlbyneSC/fonttiteema2.tres" id="9_nqax0"]
 [ext_resource type="Texture2D" uid="uid://b4texx422e73o" path="res://Assets/Backgrounds/Oikea_sana.png" id="10_5favf"]
 [ext_resource type="Texture2D" uid="uid://dttsb3q0igya2" path="res://Assets/Icons/General/Pause_yellow.png" id="10_10wws"]
@@ -21,7 +23,7 @@
 
 [node name="GameLogic" type="Node" unique_id=48654284]
 script = ExtResource("1_4xens")
-_balloonTemplates = Array[PackedScene]([ExtResource("2_nhi2l"), ExtResource("3_gtylw"), ExtResource("4_spara"), ExtResource("5_5favf"), ExtResource("7_v2n2o"), ExtResource("8_nqax0")])
+_balloonTemplates = Array[PackedScene]([ExtResource("2_nhi2l"), ExtResource("3_liv32"), ExtResource("3_gtylw"), ExtResource("4_spara"), ExtResource("5_5favf"), ExtResource("8_v2n2o"), ExtResource("7_v2n2o"), ExtResource("8_nqax0")])
 
 [node name="Background" type="TextureRect" parent="." unique_id=1652673657]
 anchors_preset = 15
@@ -29,7 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_1ax3x")
+texture = ExtResource("8_1ax3x")
 expand_mode = 1
 stretch_mode = 6
 

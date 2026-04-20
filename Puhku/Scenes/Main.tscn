@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://mtff0je00p6n" path="res://Scripts/GameLogic.cs" id="1_pbw6q"]
 [ext_resource type="PackedScene" uid="uid://bi71eciu0liqa" path="res://Scenes/balloon.tscn" id="2_v1gob"]
+[ext_resource type="PackedScene" uid="uid://dqdgx5k7rod3s" path="res://Scenes/balloon1.tscn" id="3_0sclb"]
 [ext_resource type="PackedScene" uid="uid://c414lam2i487u" path="res://Scenes/balloon2.tscn" id="3_grg3l"]
 [ext_resource type="PackedScene" uid="uid://g5mjr1kk7f6o" path="res://Scenes/balloon3.tscn" id="4_frkhe"]
 [ext_resource type="PackedScene" uid="uid://byhg8yh4t60yf" path="res://Scenes/balloon4.tscn" id="5_346fj"]
 [ext_resource type="Texture2D" uid="uid://dttsb3q0igya2" path="res://Assets/Icons/General/Pause_yellow.png" id="5_pbw6q"]
 [ext_resource type="Texture2D" uid="uid://eiguk5n06j1i" path="res://Assets/Backgrounds/Correct_word.png" id="6_1p5hy"]
 [ext_resource type="Texture2D" uid="uid://d0q28hrs11xag" path="res://Assets/Backgrounds/Game_paused_ovelay.png" id="6_v1gob"]
+[ext_resource type="PackedScene" uid="uid://bxtmqruv60nqi" path="res://Scenes/balloon5.tscn" id="7_fq0cl"]
 [ext_resource type="Texture2D" uid="uid://br627klamjfn1" path="res://Assets/Icons/English/Next_word.png" id="7_frkhe"]
 [ext_resource type="PackedScene" uid="uid://ch7ldcnumuddp" path="res://Scenes/balloon6.tscn" id="7_sxkr1"]
 [ext_resource type="Texture2D" uid="uid://d35tkpfcbmgpw" path="res://Assets/Icons/English/Main_menu.png" id="8_4kpch"]
@@ -20,7 +22,7 @@
 
 [node name="GameLogic" type="Node" unique_id=48654284]
 script = ExtResource("1_pbw6q")
-_balloonTemplates = Array[PackedScene]([ExtResource("2_v1gob"), ExtResource("3_grg3l"), ExtResource("4_frkhe"), ExtResource("5_346fj"), ExtResource("7_sxkr1"), ExtResource("8_fq0cl")])
+_balloonTemplates = Array[PackedScene]([ExtResource("2_v1gob"), ExtResource("3_0sclb"), ExtResource("3_grg3l"), ExtResource("4_frkhe"), ExtResource("5_346fj"), ExtResource("7_fq0cl"), ExtResource("7_sxkr1"), ExtResource("8_fq0cl")])
 
 [node name="Background" type="TextureRect" parent="." unique_id=1652673657]
 anchors_preset = 15

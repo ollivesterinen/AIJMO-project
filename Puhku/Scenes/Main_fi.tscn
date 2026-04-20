@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://mtff0je00p6n" path="res://Scripts/GameLogic.cs" id="1_ndlqw"]
 [ext_resource type="PackedScene" uid="uid://bi71eciu0liqa" path="res://Scenes/balloon.tscn" id="2_gstgs"]
+[ext_resource type="PackedScene" uid="uid://dqdgx5k7rod3s" path="res://Scenes/balloon1.tscn" id="3_33w6q"]
 [ext_resource type="PackedScene" uid="uid://c414lam2i487u" path="res://Scenes/balloon2.tscn" id="3_euctg"]
 [ext_resource type="PackedScene" uid="uid://g5mjr1kk7f6o" path="res://Scenes/balloon3.tscn" id="4_xcj1n"]
 [ext_resource type="PackedScene" uid="uid://byhg8yh4t60yf" path="res://Scenes/balloon4.tscn" id="5_u7oe6"]
 [ext_resource type="Texture2D" uid="uid://eiguk5n06j1i" path="res://Assets/Backgrounds/Correct_word.png" id="6_u7oe6"]
+[ext_resource type="PackedScene" uid="uid://bxtmqruv60nqi" path="res://Scenes/balloon5.tscn" id="7_gsisd"]
 [ext_resource type="Texture2D" uid="uid://g7kttjjlf7xb" path="res://Assets/Icons/Finnish/Seuraava_sana.png" id="7_ndlqw"]
 [ext_resource type="PackedScene" uid="uid://ch7ldcnumuddp" path="res://Scenes/balloon6.tscn" id="7_yd13w"]
 [ext_resource type="PackedScene" uid="uid://diabn0cmbgjx2" path="res://Scenes/balloon7.tscn" id="8_gsisd"]
@@ -21,7 +23,7 @@
 
 [node name="GameLogic" type="Node" unique_id=48654284]
 script = ExtResource("1_ndlqw")
-_balloonTemplates = Array[PackedScene]([ExtResource("2_gstgs"), ExtResource("3_euctg"), ExtResource("4_xcj1n"), ExtResource("5_u7oe6"), ExtResource("7_yd13w"), ExtResource("8_gsisd")])
+_balloonTemplates = Array[PackedScene]([ExtResource("2_gstgs"), ExtResource("3_33w6q"), ExtResource("3_euctg"), ExtResource("4_xcj1n"), ExtResource("5_u7oe6"), ExtResource("7_gsisd"), ExtResource("7_yd13w"), ExtResource("8_gsisd")])
 
 [node name="Background" type="TextureRect" parent="." unique_id=1652673657]
 anchors_preset = 15
